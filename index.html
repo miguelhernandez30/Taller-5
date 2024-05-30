@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="recursos/DayMinder 2.jpeg">
+</head>
+
+<body>
+
+    <div class="cabeza">
+        <img src="recursos/DayMinder 2.jpeg" alt="logo" width="70px" height="70px" class="logo">
+        <h2 style="color: white;">DayMinder</h2>
+
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">User</a>
+        </nav>
+    </div>
+
+    <h3 style="text-align: center;">Seleccione una Vista</h3>
+    <div class="selectorDeVistas">
+        <button onclick="mostraVistaAño()">Anual</button>
+        <button onclick="mostraVistaMes()">Mensual</button>
+        <button onclick="mostraVistaDia()">Diario</button>
+    </div>
+    <br>
+    <div class="calendarioC">
+        
+        <div class="headerCalendario">
+            <button onclick="anterior()"> < </button>
+            <button onclick="siguiente()"> > </button>
+
+            <h2 id="tituloCalendario"></h2> 
+        </div>
+        <div id="calendarioPagina" class="diasCalendario"></div>
+    </div>
+
+    <div id="añadirC" class="contenidoDeAgregacion">
+        <div class="agregarContenido">
+            <button class="cerrar" style="background-color: white; margin: 0%;" onclick="cerrarA()">×</button>
+            <h3 id="ticuloCA" style="margin: 0%; background-color: red; padding: 15px; border-radius: 5px;">Agregar Evento</h3>
+             Ingresa la fecha
+            <input type="date" id="fechaE">
+            Hola del Evento
+            <select id="event-time">
+            </select>
+            Descripcion
+            <input type="text" id="descripcionE" >
+            Participantes
+            <textarea id="añadirPC" ></textarea>
+            <div class="arregloB">
+            <button onclick="guardarEvento()">Guardar</button>
+            <button onclick="eliminarEvento()">Eliminar Evento</button>
+          
+        </div>
+        
+        </div>
+        
+    </div>
+    <p style="margin-top: -50px;">Para agregar un evento haga click sobre el dia</p>
+    <footer >
+        <p>&copy; 2024 DayMinder</p>
+    </footer>
+
+    <script src="js/utilidades.js"></script>
+</body>
+
+</html>
